@@ -29,6 +29,9 @@ return {
 			ensure_installed = {
 				"lua-language-server",
 				"stylua",
+				"jdtls",
+				"java-test",
+				"java-debug-adapter",
 			},
 		},
 	},
@@ -40,6 +43,7 @@ return {
 				"vim",
 				"lua",
 				"vimdoc",
+				"java",
 			},
 		},
 	},

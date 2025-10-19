@@ -3,9 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 local servers = { "java", "jdtls" }
 vim.lsp.enable(servers)
 
-vim.lsp.config("java", {
-	-- Your custom jdtls settings goes here
-})
+require("java")
 
 vim.lsp.config("jdtls", {
 	cmd = { vim.fn.expand("~/.local/share/nvim/mason/bin/jdtls") },
