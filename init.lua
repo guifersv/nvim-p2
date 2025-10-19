@@ -38,7 +38,3 @@ end)
 
 require("mini.move").setup()
 require("mini.surround").setup()
-
-require "configs.nvim-dap-ui"
-require "configs.nvim-dap"
-require("dapui").setup()
