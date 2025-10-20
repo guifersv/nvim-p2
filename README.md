@@ -5,14 +5,12 @@ chmod u+x nvim-linux-x86_64.appimage
 ```
 > [!TIP]
 > É bom criar um alias para executar o appimage
-<br/>
 
 ### Como instalar o setup
 ```bash
 git clone https://github.com/guifersv/nvim-p2.git ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 ```
-<br/>
 
 ### Instalando os pacotes necessários
 Dentro o nvchad, após a primeira execução:
