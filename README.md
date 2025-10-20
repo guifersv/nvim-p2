@@ -18,3 +18,6 @@ No neovim
 :Lazy sync
 :MasonInstallAll
 ```
+
+> [!TIP]
+> O comando :NvCheatsheet permite ver todos os mappings
