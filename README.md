@@ -20,4 +20,14 @@ No neovim
 ```
 
 > [!TIP]
-> O comando :NvCheatsheet permite ver todos os mappings
+> O comando `:NvCheatsheet` permite ver todos os mappings
+
+<details>
+
+<summary>Como remover</summary>
+
+```bash
+rm -rf ~/.config/nvim ~/.local/share/nvim ~/.cache/nvim
+```
+
+</details>
