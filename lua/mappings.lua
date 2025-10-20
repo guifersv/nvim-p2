@@ -39,4 +39,43 @@ map("n", "<A-r>", function()
 	})
 end, { desc = "Java code runner" })
 
+-- Debugger
+
+map("n", "<leader>dt", function()
+	require("dap").toggle_breakpoint()
+end, { desc = "Toggle Breakpoint" })
+
+map("n", "<leader>dc", function()
+	require("dap").continue()
+end, { desc = "Continue" })
+
+map("n", "<leader>di", function()
+	require("dap").step_into()
+end, { desc = "Step Into" })
+
+map("n", "<leader>do", function()
+	require("dap").step_over()
+end, { desc = "Step Over" })
+
+map("n", "<leader>du", function()
+	require("dap").step_out()
+end, { desc = "Step Out" })
+
+map("n", "<leader>dd", function()
+	require("dapui").toggle()
+end, { desc = "DAP UI Toggle" })
+
+map("n", "<leader>dl", function()
+	require("dap").run_last()
+end, { desc = "Run Last" })
+
+map("n", "<leader>dr", function()
+	require("dap").repl.open()
+end, { desc = "Open REPL" })
+
+map("n", "<leader>dq", function()
+	require("dap").terminate()
+	require("dapui").close()
+end, { desc = "Terminate" })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
