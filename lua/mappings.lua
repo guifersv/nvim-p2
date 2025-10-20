@@ -30,6 +30,11 @@ map("n", "<leader><S-x>", function()
 	require("nvchad.tabufline").closeAllBufs(true)
 end, { desc = "Buffer Close All" })
 
+map("n", "<tab>", "<cmd> tabnext <cr>", { desc = "Tab Next" })
+map("n", "<S-tab>", "<cmd> tabprev <cr>", { desc = "Tab Prev" })
+map("n", "<leader>tx", "<cmd> tabclose <cr>", { desc = "Tab Close" })
+map("n", "<leader>tt", "<cmd> tabnew <cr>", { desc = "Tab New" })
+
 map("n", "<A-r>", function()
 	local file = vim.fn.expand("%:p")
 	local classname = vim.fn.expand("%:t:r")
