@@ -13,7 +13,7 @@ rm -rf ~/.config/nvim/.git
 ```
 
 ### Instalando os pacotes necessários
-Dentro o nvchad, após a primeira execução:
+No neovim
 ```nvim
 :Lazy sync
 :MasonInstallAll
