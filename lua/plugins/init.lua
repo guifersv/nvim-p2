@@ -31,6 +31,7 @@ return {
 				"lua-language-server",
 				"stylua",
 				"jdtls",
+				"java-debug-adapter",
 			},
 		},
 	},
@@ -51,6 +52,7 @@ return {
 		"mfussenegger/nvim-dap",
 		dependencies = {
 			"rcarriga/nvim-dap-ui",
+			"mfussenegger/nvim-jdtls",
 		},
 		-- config = function()
 		--   require "custom-config.nvim-dap"

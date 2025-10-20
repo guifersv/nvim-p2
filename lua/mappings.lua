@@ -78,8 +78,4 @@ map("n", "<leader>dq", function()
 	require("dapui").close()
 end, { desc = "Terminate" })
 
-map("n", "<leader>db", function()
-	require("dap").list_breakpoints()
-end, { desc = "List Breakpoints" })
-
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

@@ -1,4 +1,5 @@
 local M = {}
+local home = os.getenv("HOME")
 
 function M:setup()
 	local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
@@ -79,7 +80,13 @@ function M:setup()
 		--
 		-- If you don't plan on using the debugger or other eclipse.jdt.ls plugins you can remove this
 		init_options = {
-			bundles = {},
+			bundles = {
+				vim.fn.glob(
+					home
+						.. "/.local/share/nvim/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar",
+					1
+				),
+			},
 		},
 	}
 	-- This starts a new client & server,
