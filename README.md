@@ -2,7 +2,7 @@
 ```bash
 curl https://mise.run | sh
 echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
-mise use -g java lua node npm
+mise use -g java lua node npm python
 ```
 
 ### Como instalar o neovim na máquina do laboratório
