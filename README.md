@@ -16,7 +16,7 @@ rm -rf ~/.config/nvim/.git
 No neovim
 ```nvim
 :Lazy sync
-:MasonInstallAll
+:MasonInstall jdtls stylua lua-language-server java-debug-adapter google-java-format
 ```
 
 > [!TIP]
