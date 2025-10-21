@@ -1,6 +1,7 @@
 require("nvchad.mappings")
 
--- add yours here
+-- Dirlididi Token
+_G.Dirlididi = { meutoken = "loveamor", idquestao = "coracao" }
 
 local map = vim.keymap.set
 
@@ -46,6 +47,27 @@ map("n", "<A-r>", function()
 		clear_cmd = false,
 	})
 end, { desc = "Java code runner" })
+
+map("n", "<leader>ci", function()
+	local input = vim.fn.input("Id da Questão: ")
+	_G.Dirlididi.idquestao = input
+end, { desc = "Dirlididi Set Problem Id" })
+
+map("n", "<leader>ct", function()
+	local input = vim.fn.input("Seu Token: ")
+	_G.Dirlididi.meutoken = input
+end, { desc = "Dirlididi Set Token" })
+
+map("n", "<leader>cs", function()
+	local file = vim.fn.expand("%:p")
+
+	require("nvchad.term").runner({
+		pos = "vsp",
+		cmd = "python dirlididi.py submit " .. _G.Dirlididi.idquestao .. _G.Dirlididi.meutoken .. file,
+		id = "ekk",
+		clear_cmd = false,
+	})
+end, { desc = "Dirlididi code submit" })
 
 -- Debugger
 
