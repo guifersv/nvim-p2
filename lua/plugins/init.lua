@@ -32,6 +32,7 @@ return {
 				"stylua",
 				"jdtls",
 				"java-debug-adapter",
+				"google-java-format",
 			},
 		},
 	},
