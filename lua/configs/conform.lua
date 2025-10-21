@@ -1,6 +1,9 @@
 local options = {
   formatters_by_ft = {
     java = { "google-java-format" },
+		lua = { "stylua" },
+		html = { "prettier" },
+		css = { "prettier" },
   },
   formatters = {
   },
