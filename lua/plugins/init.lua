@@ -28,8 +28,6 @@ return {
 				"github:Crashdummyy/mason-registry",
 			},
 			ensure_installed = {
-				"lua-language-server",
-				"stylua",
 				"jdtls",
 				"java-debug-adapter",
 				"google-java-format",
