@@ -23,7 +23,7 @@ rm -rf ~/.config/nvim/.git
 No neovim
 ```nvim
 :Lazy sync
-:MasonInstall jdtls java-debug-adapter google-java-format
+:MasonInstall typescript-language-server lua-language-server prettier stylua jdtls java-debug-adapter google-java-format
 ```
 
 > [!TIP]
