@@ -28,6 +28,8 @@ No neovim
 
 > [!TIP]
 > O comando `:NvCheatsheet` permite ver todos os mappings
+> Use o comando `:SetToken` para setar o id do token
+> Use o comando `:SetId` para setar o id da questão
 
 <details>
 
