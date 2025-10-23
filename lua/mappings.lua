@@ -1,8 +1,5 @@
 require("nvchad.mappings")
 
--- Dirlididi Token
-_G.Dirlididi = { meutoken = "loveamor", idquestao = "coracao" }
-
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
@@ -43,27 +40,27 @@ map("n", "<A-r>", function()
 	require("nvchad.term").runner({
 		pos = "vsp",
 		cmd = "javac " .. file .. " && java " .. classname,
-		id = "ekk",
+		id = "jcr",
 		clear_cmd = false,
 	})
 end, { desc = "Java code runner" })
 
 map("n", "<leader>ci", function()
 	local input = vim.fn.input("Id da Questão: ")
-	_G.Dirlididi.idquestao = input
+	vim.g.idquestao = input
 end, { desc = "Dirlididi Set Problem Id" })
 
 map("n", "<leader>ct", function()
 	local input = vim.fn.input("Seu Token: ")
-	_G.Dirlididi.meutoken = input
+	vim.g.meutoken = input
 end, { desc = "Dirlididi Set Token" })
 
 map("n", "<leader>cs", function()
-	local file = vim.fn.expand("%:p")
+	local file = vim.fn.expand("%:t")
 
 	require("nvchad.term").runner({
 		pos = "vsp",
-		cmd = "python dirlididi.py submit " .. _G.Dirlididi.idquestao .. _G.Dirlididi.meutoken .. file,
+		cmd = "python dirlididi.py submit " .. vim.g.idquestao .. vim.g.meutoken .. file,
 		id = "ekk",
 		clear_cmd = false,
 	})
