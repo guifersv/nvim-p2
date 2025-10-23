@@ -45,26 +45,17 @@ map("n", "<A-r>", function()
 	})
 end, { desc = "Java code runner" })
 
-map("n", "<leader>ci", function()
-	local input = vim.fn.input("Id da Questão: ")
-	vim.g.idquestao = input
-end, { desc = "Dirlididi Set Problem Id" })
-
-map("n", "<leader>ct", function()
-	local input = vim.fn.input("Seu Token: ")
-	vim.g.meutoken = input
-end, { desc = "Dirlididi Set Token" })
-
 map("n", "<leader>cs", function()
 	local file = vim.fn.expand("%:t")
 
 	require("nvchad.term").runner({
 		pos = "vsp",
-		cmd = "python dirlididi.py submit " .. vim.g.idquestao .. vim.g.meutoken .. file,
+		cmd = "python dirlididi.py submit " .. vim.g.idquestao .. " " .. vim.g.meutoken .. " " .. file,
 		id = "ekk",
 		clear_cmd = false,
 	})
 end, { desc = "Dirlididi code submit" })
+
 
 -- Debugger
 
@@ -104,5 +95,17 @@ map("n", "<leader>dq", function()
 	require("dap").terminate()
 	require("dapui").close()
 end, { desc = "Dap Terminate" })
+
+vim.api.nvim_create_user_command("SetId", function(opts)
+	vim.g.idquestao = opts.args
+end, {
+	nargs = 1,
+})
+
+vim.api.nvim_create_user_command("SetToken", function(opts)
+	vim.g.meutoken = opts.args
+end, {
+	nargs = 1,
+})
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
