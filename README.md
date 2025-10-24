@@ -28,8 +28,9 @@ No neovim
 
 > [!TIP]
 > O comando `:NvCheatsheet` permite ver todos os mappings.
-> Use o comando `:SetToken` para setar o id do token.
-> Use o comando `:SetId` para setar o id da questão.
+> Use o comando `:SetToken` para setar o seu token
+> e o comando `:SetId` para setar o id da questão.
+> O comando `<leader>cs` executa o dirlididi.
 
 <details>
 
