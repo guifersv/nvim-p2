@@ -1,7 +1,6 @@
 ### Como instalar os pacotes
 ```bash
-curl https://mise.run | sh
-echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
+curl https://mise.run/bash | sh
 mise use -g java lua node npm python
 ```
 
