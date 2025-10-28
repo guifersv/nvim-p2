@@ -6,11 +6,8 @@ mise use -g java lua node npm python
 
 ### Como instalar o neovim na máquina do laboratório (Se tiver desatualizado)
 ```bash
-wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-chmod u+x nvim-linux-x86_64.appimage
+mise use -g neovim
 ```
-> [!TIP]
-> É bom criar um alias para executar o appimage
 
 ### Como instalar o setup
 ```bash
