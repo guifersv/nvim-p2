@@ -1,2 +1,4 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
+vim.g.meutoken = "loveamor"
+vim.g.idquestao = "coracao"
+
 require("config.lazy")
