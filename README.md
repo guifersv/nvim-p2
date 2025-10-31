@@ -24,6 +24,7 @@ No neovim
 > [!TIP]
 > Use o comando `:SetToken` para setar o seu token
 > e o comando `:SetId` para setar o id da questão.
+> Alguns comandos úteis `<leader>j`
 
 <details>
 
