@@ -19,14 +19,11 @@ rm -rf ~/.config/nvim/.git
 No neovim
 ```nvim
 :Lazy sync
-:MasonInstall typescript-language-server lua-language-server prettier stylua jdtls java-debug-adapter google-java-format html-lsp css-lsp json-lsp yaml-language-server
 ```
 
 > [!TIP]
-> O comando `:NvCheatsheet` permite ver todos os mappings.
 > Use o comando `:SetToken` para setar o seu token
 > e o comando `:SetId` para setar o id da questão.
-> O comando `<leader>cs` executa o dirlididi.
 
 <details>
 
