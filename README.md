@@ -1,4 +1,4 @@
-### Como instalar os pacotes
+### Como instalar as ferramentas
 ```bash
 curl https://mise.run/bash | sh
 mise use -g java lua node npm python
