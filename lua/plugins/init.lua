@@ -2,6 +2,9 @@ return {
 
   { "mfussenegger/nvim-jdtls" },
   {
+    "kkoomen/vim-doge",
+  },
+  {
     "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
