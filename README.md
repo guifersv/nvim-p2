@@ -25,7 +25,7 @@ No neovim
 > [!TIP]
 > Use o comando `:SetToken` para setar o seu token
 > e o comando `:SetId` para setar o id da questão.
-> Alguns comandos úteis `<leader>j`
+> Use `<leader>j` para alguns comandos úteis para java e dirlididi.
 
 <details>
 
