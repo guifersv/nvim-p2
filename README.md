@@ -19,6 +19,7 @@ rm -rf ~/.config/nvim/.git
 No neovim
 ```nvim
 :Lazy sync
+:call doge#install()
 ```
 
 > [!TIP]
