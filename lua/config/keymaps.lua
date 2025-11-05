@@ -69,3 +69,6 @@ map("n", "<leader>dq", function()
   require("dap").terminate()
   require("dapui").close()
 end, { desc = "Dap Terminate" })
+
+vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true, silent = true })
+vim.keymap.set("v", "<C-c>", "<Esc>", { noremap = true, silent = true })

@@ -1,6 +1,4 @@
 return {
-
-  { "mfussenegger/nvim-jdtls" },
   {
     "kkoomen/vim-doge",
   },
@@ -8,9 +6,6 @@ return {
     "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
-        "jdtls",
-        "json-lsp",
-        "yaml-language-server",
         "java-debug-adapter",
         "google-java-format",
       },
