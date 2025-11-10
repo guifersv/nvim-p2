@@ -3,12 +3,6 @@
 -- Add any additional keymaps here
 local map = vim.keymap.set
 
-map("n", "<leader>jr", function()
-  local file = vim.fn.expand("%:p")
-  local classname = vim.fn.expand("%:t:r")
-  Snacks.terminal("javac " .. file .. " && java " .. classname, { cwd = LazyVim.root(), auto_close = false })
-end, { desc = "Java code runner" })
-
 map("n", "<leader>js", function()
   local file = vim.fn.expand("%:t")
   Snacks.terminal(
@@ -53,10 +47,6 @@ map("n", "<leader>ds", function()
   require("dap").step_out()
 end, { desc = "Dap Step Out" })
 
-map("n", "<leader>dd", function()
-  require("dapui").toggle()
-end, { desc = "Dap UI Toggle" })
-
 map("n", "<leader>dl", function()
   require("dap").run_last()
 end, { desc = "Dap Run Last" })
@@ -67,7 +57,6 @@ end, { desc = "Dap Open REPL" })
 
 map("n", "<leader>dq", function()
   require("dap").terminate()
-  require("dapui").close()
 end, { desc = "Dap Terminate" })
 
 vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true, silent = true })
