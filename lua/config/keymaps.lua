@@ -25,8 +25,6 @@ end, {
   nargs = 1,
 })
 
--- Debugger
-
 map("n", "<leader>dt", function()
   require("dap").toggle_breakpoint()
 end, { desc = "Dap Toggle Breakpoint" })
@@ -52,8 +50,8 @@ map("n", "<leader>dl", function()
 end, { desc = "Dap Run Last" })
 
 map("n", "<leader>dr", function()
-  require("dap").repl.open()
-end, { desc = "Dap Open REPL" })
+  require("dap").repl.toggle()
+end, { desc = "Dap Toggle REPL" })
 
 map("n", "<leader>dq", function()
   require("dap").terminate()
