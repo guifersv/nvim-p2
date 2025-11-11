@@ -11,8 +11,6 @@ map("n", "<leader>js", function()
   )
 end, { desc = "Java Dirlididi code submit" })
 
-vim.keymap.set("n", "<Leader>jd", "<Plug>(doge-generate)", { desc = "Java Generate documatation" })
-
 vim.api.nvim_create_user_command("SetId", function(opts)
   vim.g.idquestao = opts.args
 end, {

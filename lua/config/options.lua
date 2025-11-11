@@ -3,3 +3,4 @@
 -- Add any additional options here
 vim.opt.relativenumber = true
 vim.o.swapfile = false
+vim.g.doge_mapping = "<leader>jd"
