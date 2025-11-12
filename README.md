@@ -19,6 +19,7 @@ rm -rf ~/.config/nvim/.git
 No neovim
 ```nvim
 :Lazy sync
+:CocInstall coc-java coc-java-debug
 :call doge#install()
 ```
 

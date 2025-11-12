@@ -1,23 +1,22 @@
 return {
   {
-    "kkoomen/vim-doge",
+    "puremourning/vimspector",
   },
+  { "kkoomen/vim-doge" },
   {
     "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "google-java-format",
       },
+      registries = {
+        "github:mason-org/mason-registry",
+        "github:Crashdummyy/mason-registry",
+      },
     },
   },
   {
     "neoclide/coc.nvim",
     branch = "release",
-  },
-  {
-    "puremourning/vimspector",
-    config = function()
-      vim.g.vimspector_enable_mappings = "HUMAN"
-    end,
   },
 }

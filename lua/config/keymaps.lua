@@ -3,8 +3,31 @@
 -- Add any additional keymaps here
 local map = vim.keymap.set
 
+map("n", "<leader>js", function()
+  local file = vim.fn.expand("%:t")
+  Snacks.terminal(
+    "python dirlididi.py submit " .. vim.g.idquestao .. " " .. vim.g.meutoken .. " " .. file,
+    { cwd = LazyVim.root(), auto_close = false }
+  )
+end, { desc = "Java Dirlididi code submit" })
+
+vim.api.nvim_create_user_command("SetId", function(opts)
+  vim.g.idquestao = opts.args
+end, {
+  nargs = 1,
+})
+
+vim.api.nvim_create_user_command("SetToken", function(opts)
+  vim.g.meutoken = opts.args
+end, {
+  nargs = 1,
+})
+
+vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true, silent = true })
+vim.keymap.set("v", "<C-c>", "<Esc>", { noremap = true, silent = true })
+
 -- Java debugging keymaps (using coc-java-debug)
-map("n", "<leader>jd", "<cmd>CocCommand java.debug.vimspector.start<CR>", { desc = "Java: Start Debug" })
+map("n", "<leader>jr", "<cmd>CocCommand java.debug.vimspector.start<CR>", { desc = "Java: Start Debug" })
 
 -- Vimspector keymaps
 map("n", "<leader>dd", "<cmd>call vimspector#Launch()<CR>", { desc = "Debug: Launch" })
