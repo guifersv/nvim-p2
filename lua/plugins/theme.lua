@@ -1,1 +1,12 @@
-/home/guilove/.config/omarchy/current/theme/neovim.lua
+return {
+  {
+    "bjarneo/ash.nvim",
+    name = "ash",
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "ash",
+    },
+  },
+}
