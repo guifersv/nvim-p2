@@ -6,10 +6,18 @@ return {
     "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
-        "jdtls",
-        "java-debug-adapter",
         "google-java-format",
       },
     },
+  },
+  {
+    "neoclide/coc.nvim",
+    branch = "release",
+  },
+  {
+    "puremourning/vimspector",
+    config = function()
+      vim.g.vimspector_enable_mappings = "HUMAN"
+    end,
   },
 }

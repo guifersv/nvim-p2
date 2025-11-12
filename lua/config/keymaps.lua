@@ -3,58 +3,22 @@
 -- Add any additional keymaps here
 local map = vim.keymap.set
 
-map("n", "<leader>js", function()
-  local file = vim.fn.expand("%:t")
-  Snacks.terminal(
-    "python dirlididi.py submit " .. vim.g.idquestao .. " " .. vim.g.meutoken .. " " .. file,
-    { cwd = LazyVim.root(), auto_close = false }
-  )
-end, { desc = "Java Dirlididi code submit" })
+-- Java debugging keymaps (using coc-java-debug)
+map("n", "<leader>jd", "<cmd>CocCommand java.debug.vimspector.start<CR>", { desc = "Java: Start Debug" })
 
-vim.api.nvim_create_user_command("SetId", function(opts)
-  vim.g.idquestao = opts.args
-end, {
-  nargs = 1,
-})
-
-vim.api.nvim_create_user_command("SetToken", function(opts)
-  vim.g.meutoken = opts.args
-end, {
-  nargs = 1,
-})
-
-map("n", "<leader>dt", function()
-  require("dap").toggle_breakpoint()
-end, { desc = "Dap Toggle Breakpoint" })
-
-map("n", "<leader>dc", function()
-  require("dap").continue()
-end, { desc = "Dap Continue" })
-
-map("n", "<leader>di", function()
-  require("dap").step_into()
-end, { desc = "Dap Step Into" })
-
-map("n", "<leader>do", function()
-  require("dap").step_over()
-end, { desc = "Dap Step Over" })
-
-map("n", "<leader>ds", function()
-  require("dap").step_out()
-end, { desc = "Dap Step Out" })
-
-map("n", "<leader>dl", function()
-  require("dap").run_last()
-end, { desc = "Dap Run Last" })
-
-map("n", "<leader>dr", function()
-  require("dap").repl.toggle()
-end, { desc = "Dap Toggle REPL" })
-
-map("n", "<leader>dq", function()
-  require("dap").terminate()
-  require("dapui").close()
-end, { desc = "Dap Terminate" })
-
-vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true, silent = true })
-vim.keymap.set("v", "<C-c>", "<Esc>", { noremap = true, silent = true })
+-- Vimspector keymaps
+map("n", "<leader>dd", "<cmd>call vimspector#Launch()<CR>", { desc = "Debug: Launch" })
+map("n", "<leader>de", "<cmd>call vimspector#Reset()<CR>", { desc = "Debug: Stop" })
+map("n", "<leader>dc", "<cmd>call vimspector#Continue()<CR>", { desc = "Debug: Continue" })
+map("n", "<leader>db", "<cmd>call vimspector#ToggleBreakpoint()<CR>", { desc = "Debug: Toggle Breakpoint" })
+map(
+  "n",
+  "<leader>dB",
+  "<cmd>call vimspector#ToggleBreakpoint(v:null, v:null, input('Condition: '))<CR>",
+  { desc = "Debug: Conditional Breakpoint" }
+)
+map("n", "<leader>do", "<cmd>call vimspector#StepOver()<CR>", { desc = "Debug: Step Over" })
+map("n", "<leader>di", "<cmd>call vimspector#StepInto()<CR>", { desc = "Debug: Step Into" })
+map("n", "<leader>dO", "<cmd>call vimspector#StepOut()<CR>", { desc = "Debug: Step Out" })
+map("n", "<leader>dh", "<cmd>call vimspector#ToggleVariablePreview()<CR>", { desc = "Debug: Hover Variable" })
+map("n", "<leader>dr", "<cmd>call vimspector#Restart()<CR>", { desc = "Debug: Restart" })
