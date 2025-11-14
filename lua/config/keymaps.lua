@@ -23,15 +23,6 @@ end, {
   nargs = 1,
 })
 
-vim.keymap.set("i", "<Tab>", function()
-  return vim.fn["coc#pum#visible"]() == 1 and vim.fn or "<Tab>"
-end, { expr = true, silent = true, replace_keycodes = false })
-
--- Shift-Tab: select previous item in Coc popup
-vim.keymap.set("i", "<S-Tab>", function()
-  return vim.fn["coc#pum#visible"]() == 1 and vim.fn or "<S-Tab>"
-end, { expr = true, silent = true, replace_keycodes = false })
-
 vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true, silent = true })
 vim.keymap.set("v", "<C-c>", "<Esc>", { noremap = true, silent = true })
 
