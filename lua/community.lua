@@ -8,5 +8,6 @@ return {
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.debugging.nvim-dap-view" },
+  { import = "astrocommunity.motion.mini-surround" },
   -- import/override with your plugins folder
 }
