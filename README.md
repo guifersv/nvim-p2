@@ -24,6 +24,9 @@ No neovim
 
 > [!TIP]
 > `<leader>d` para o debugger.
+> `<leader>a` para o neogen.
+> `gz` para o surround.
+> `gS` para o split.
 
 <details>
 
