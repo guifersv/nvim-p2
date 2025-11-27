@@ -4,13 +4,14 @@
 
 ---@type LazySpec
 return {
-  "AstroNvim/astrocommunity",
-  { import = "astrocommunity.colorscheme.rose-pine" },
-  { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.motion.mini-surround" },
-  { import = "astrocommunity.motion.mini-move" },
-  { import = "astrocommunity.editing-support.neogen" },
-  { import = "astrocommunity.lsp.actions-preview-nvim" },
-  -- { import = "astrocommunity.completion.nvim-cmp" },
-  -- { import = "astrocommunity.utility.noice-nvim" },
+	"AstroNvim/astrocommunity",
+	{ import = "astrocommunity.colorscheme.rose-pine" },
+	{ import = "astrocommunity.pack.lua" },
+	{ import = "astrocommunity.motion.mini-surround" },
+	{ import = "astrocommunity.motion.mini-move" },
+	{ import = "astrocommunity.editing-support.neogen" },
+	{ import = "astrocommunity.lsp.actions-preview-nvim" },
+	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
+	-- { import = "astrocommunity.completion.nvim-cmp" },
+	-- { import = "astrocommunity.utility.noice-nvim" },
 }
