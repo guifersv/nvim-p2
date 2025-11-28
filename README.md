@@ -23,9 +23,9 @@ No neovim
 
 > [!TIP]
 > `<leader>d` para o debugger.
-> `<leader>a` para o neogen.
-> `<leader>T` para o test runner do jdtls.
-> `gz` para o surround.
+> `<leader>cn` para o neogen.
+> `<leader>j` para o test runner do jdtls.
+> `gs` para o surround.
 
 <details>
 
