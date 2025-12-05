@@ -28,11 +28,27 @@ No neovim
 > `gz` para o surround.
 
 <details>
-
 <summary>Como remover</summary>
 
 ```bash
 rm -rf ~/.config/nvim ~/.local/share/nvim ~/.cache/nvim
 ```
-
 </details>
+
+<details>
+<summary>Fix no jsonc</summary>
+Vá em ~/.local/share/nvim/lazy/nvim-treesitter/lua/nvim-treesitter/parsers.lua e mude o bloco jsonc para:
+
+```lua
+jsonc = {
+  install_info = {
+    revision = '02b01653c8a1c198ae7287d566efa86a135b30d5',
+    url = 'https://github.com/sunilunnithan/tree-sitter-jsonc.git',
+  },
+  maintainers = { '@WhyNotHugo' },
+  requires = { 'json' },
+  tier = 2,
+},
+```
+</details>
+
