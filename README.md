@@ -18,7 +18,7 @@ rm -rf ~/.config/nvim/.git
 ```
 
 > [!TIP]
-> Se quiser usar melhor os plugins pesquise sobre eles
+> Pesquise sobre os plugins
 
 <details>
 <summary>Como remover</summary>
