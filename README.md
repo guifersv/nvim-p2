@@ -1,13 +1,10 @@
-### Como instalar as ferramentas
+### Como instalar as ferramentas (Pode deixar o terminal lento)
 ```bash
 curl https://mise.run/bash | sh
-mise use -g java lua node npm python
+mise use -g java node
 ```
 
-### Como instalar o neovim na máquina do laboratório (Se tiver desatualizado)
-```bash
-mise use -g neovim
-```
+**O [mise en place](https://github.com/jdx/mise) tem uma quantidade absurda de [ferramentas](https://mise.jdx.dev/registry.html#tools) que você pode instalar na máquina sem precisar de permissões sudo**
 
 ### Como instalar o setup
 ```bash
@@ -15,17 +12,13 @@ git clone https://github.com/guifersv/nvim-p2.git ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 ```
 
-### Instalando os pacotes necessários
-No neovim
-```nvim
+### Quando entrar no neovim pela primeira vez é recomendado atualizar os plugins
+```
 :Lazy sync
 ```
 
 > [!TIP]
-> `<leader>d` para o debugger.
-> `<leader>cn` para o neogen.
-> `<leader>j` para o test runner do jdtls.
-> `gs` para o surround.
+> Se quiser usar melhor os plugins pesquise sobre eles
 
 <details>
 <summary>Como remover</summary>
@@ -34,21 +27,3 @@ No neovim
 rm -rf ~/.config/nvim ~/.local/share/nvim ~/.cache/nvim
 ```
 </details>
-
-<details>
-<summary>Fix no jsonc</summary>
-Vá em ~/.local/share/nvim/lazy/nvim-treesitter/lua/nvim-treesitter/parsers.lua e mude o bloco jsonc para:
-
-```lua
-jsonc = {
-  install_info = {
-    revision = '02b01653c8a1c198ae7287d566efa86a135b30d5',
-    url = 'https://github.com/sunilunnithan/tree-sitter-jsonc.git',
-  },
-  maintainers = { '@WhyNotHugo' },
-  requires = { 'json' },
-  tier = 2,
-},
-```
-</details>
-
