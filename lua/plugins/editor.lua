@@ -12,6 +12,8 @@ return {
 				{ "<leader>c", group = "Trouble", mode = "n" },
 				{ "<leader>b", group = "Buffer", mode = "n" },
 				{ "<leader>f", group = "Telescope", mode = "n" },
+				{ "<leader>j", group = "Java", mode = "n" },
+				{ "<leader>d", group = "Debugger", mode = "n" },
 			},
 		},
 	},

@@ -13,6 +13,8 @@ return {
     require("mason-tool-installer").setup({
       ensure_installed = {
         "jdtls",
+        "java-debug-adapter",
+        "java-test",
         "google-java-format",
         "lua_ls",
         "stylua",
