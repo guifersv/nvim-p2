@@ -172,3 +172,7 @@ set({ "n", "x" }, "<leader>la", vim.lsp.buf.code_action, { desc = "LSP: Code Act
 set("n", "<leader>lh", function()
 	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, { desc = "Toggle Inlay Hints" })
+
+set("n", "<leader>lc", function()
+  require('neogen').generate()
+end, { desc = "Neogen" })
